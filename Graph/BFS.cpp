@@ -1,6 +1,6 @@
 #inlcude <bits/stdc++.h>
 using namespace std;
-void find(vector<int>adj[],int n,int m,vector<int>arr,int vis[])
+void find(vector<int>adj[],vector<int>arr,int vis[])
 {
     queue<int>q;
     q.push(i);
@@ -23,13 +23,12 @@ void find(vector<int>adj[],int n,int m,vector<int>arr,int vis[])
 vector<int>BFS(vector<int>adj[],int n,int m)
 {
     vector<int>vis(n+1,0);
-    int vis[n+1];
     vector<int>arr;
-    for(int i=0;i<m;i++)
+    for(int i=0;i<n;i++)
     {
         if(!vis[i])
         {
-            find(adj,,n,m,arr,vis);
+            find(adj,arr,vis);
         }
     }
 }
