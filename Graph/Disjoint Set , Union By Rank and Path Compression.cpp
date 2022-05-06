@@ -2,7 +2,7 @@
 using namespace std;
 int parent[10000];
 int rank[10000];
-void makeSet()
+void makeSet(int n)
 {
     for(int i=1;i<=n;i++)
     {
@@ -37,7 +37,9 @@ void union(int n,int m)
     }
 }
 int main() {
-    makeSet();
+    int n;
+    cin>>n;
+    makeSet(n);
     int m;
     cin>>m;
     while(m--)
